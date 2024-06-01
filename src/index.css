@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    color: black;
+    background-color: #ffffff; /* Adjust background color as needed */
+    overflow-x: hidden; /* Prevents horizontal scroll on body */
+    padding-bottom: 90px;
+    /* padding: 0px 30px 90px 30px; */
+}
+
+.home-hero-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 50px; /* Aligns content to the left */
+}
+
+.hero {
+    text-align: left;
+}
+
+.bold-text-1 {
+    font-size: 13px;
+    letter-spacing: 1.63px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+.bold-text-subhead {
+    font-size: 20px;
+    letter-spacing: 1.63px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.bold-text-2 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.featured-projects-header {
+    padding-top: 70px;
+}
+
+.featured-projects-header, .featured-projects {
+    padding-left: 50px; /* Aligns these sections to match the hero section */
+}
+
+.featured-projects-header h3 {
+    margin-bottom: 20px; /* Space between header and project cards */
+}
+
+.featured-projects {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Hides vertical overflow */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: nowrap; /* Keeps cards on one line */
+}
+
+.project-card {
+    flex: 0 0 auto; /* Ensures cards do not grow or shrink */
+    width: 600px;
+    height: 600px;
+    margin-right: 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main navigation styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px; /* Positioned near the bottom of the viewport */
+    width: fit-content;
+    background-color: rgba(214, 213, 213, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    color: #fff;
+    padding: 10px 15px;
+    z-index: 1000; /* Ensure it's above other content */
+    border-radius: 50px; /* Rounded corners for a smooth look */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links li a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: color 0.7s; /* Color transition for text */
+    border-radius: 50px;
+    background-color: transparent; /* Ensure background is transparent initially */
+}
+
+.nav-links li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from left beyond visible area */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(8, 8, 8); /* Dark background for hover */
+    border-radius: 50px; /* Fully rounded edges */
+    z-index: -1;
+    transition: left 0.3s ease-out; /* Transition for moving background */
+}
+
+.nav-links li a:hover::before {
+    left: 0; /* Move background to cover the link on hover */
+}
+
+.nav-links li a:hover {
+    color: #fff; /* White text on hover */
+}
+
+/* Hamburger menu styling - hidden on desktop */
+.hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer-email {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.footer-email::before,
+.footer-email::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.footer-email::before {
+    background-color: #000;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.footer-email::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #000;
+}
+
+.footer-email:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.footer-email:hover::after {
+    transform: translate3d(0, 0, 0);
+    cursor: pointer;
+}
+
+.footer-email span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.footer-email:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+footer {
+    padding: 0px 30px;
+    padding-top: 350px;
+    height: 100vh;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+footer h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    display: block;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 600;
+    unicode-bidi: isolate;
+    width: fit-content;
+    color: #484747;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.footer-links a {
+    padding: 0px 10px;
+    width: 140px;
+    text-align: end;
+}
+
+.skills-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 50px;
+    gap: 20px;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills-description {
+    flex: 1;
+    order: 1; /* On desktop, this will be on the left */
+}
+
+.description-content {
+    display: none;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 1;
+}
+
+.description-content.active {
+    display: block;
+}
+
+.skills-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    order: 2; /* On desktop, this will be on the right */
+    cursor: pointer;
+}
+
+.skills-stack {
+    font-size: 40px;
+    padding: 24px 26px 24px 11px;
+    border-bottom: .2px solid black;
+    line-height: 110%;
+    font-weight: 100;
+}
+
+.skill-description-header {
+    font-weight: 400;
+}
+
+.projects-page-container {
+    padding: 220px 50px 57px 50px;
+}
+
+.project-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.project-details-header {
+    padding: 220px 50px 57px 50px;
+    height: 100vh;
+}
+
+.project-header-sectioin-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project-title {
+    font-size: calc(40px + 50*(100vw - 576px)/1024);
+}
+
+.project-description {
+    font-size: 37.5px;
+    max-width: 600px;
+    line-height: 1.4;
+    margin-top: calc(16px + 32*(100vw - 576px) / 1024);
+}
+
+.project-detail-video {
+    width: 495px;
+    height: 280px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.project-action-button {
+    padding: 0px 44.25px;
+    height: calc(40px + 32*(100vw - 576px)/1024);
+    border-radius: 40px;
+    font-size: 22.75px;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.project-header-sectioin-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72.5px;
+    align-items: flex-end;
+}
+
+.project-stacks-container {
+    display: flex;
+    align-items: center;
+    gap: calc(8px + 8*(100vw - 576px)/1024);
+}
+
+.project-stacks {
+    padding: 0px 37.5px;
+    font-weight: 500;
+    border: 1px solid black;
+    width: fit-content;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.projects-main {
+    padding: 0 50px;
+}
+
+.project-pic-1 {
+    width: 100;
+    background: #000;
+    height: 80vh;
+    border-radius: 20px;
+    margin: 54px 0px;
+}
+
+.project-brief-container {
+    padding: 110px 0px;
+}
+
+.project-brief-title {
+    font-size:calc(30px + 26*(100vw - 576px)/1024);
+    line-height: 1.4;
+}
+
+.project-brief-description {
+    margin-top: 29.5px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.project-pic-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 54px 0px;
+}
+
+.project-pic-grid-item {
+    flex: 1 1 45%; /* Adjusts to take about 45% of the container width, allowing two cards per row */
+    margin-bottom: 20px; /* Space between cards vertically */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 20px; /* Rounded corners for aesthetics */
+    height: 600px;
+    position: relative;
+    cursor: pointer;
+    border: 4px solid transparent;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+    z-index: 0; /* Ensure the background image is behind the details */
+}
+
+.project-pic-grid-item:hover .background-image {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.project-pic-grid-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 20px;
+    pointer-events: none; /* Ensures the gradient doesn't interfere with interactions */
+    z-index: 1; /* Ensure the gradient is above the background image */
+}
+
+.project-item-details {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2; /* Ensures the text is above the gradient */
+}
+
+.project-item-details h2 {
+    color: white;
+    font-size: 40px;
+}
+
+.project-item-details span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-item-details span p {
+    color: white;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px 12px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    
+.home-hero-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0px; /* Aligns content to the left */
+}
+    body{
+        background-color: aqua;
+        display: flex;
+        padding:0px 20px
+    }
+    .bold-text-2 {
+        font-size: 30px;
+    }
+
+    /* .home-hero-container, .featured-projects-header, .featured-projects {
+        padding-left: 20px;
+    } */
+
+    .projects-container {
+        flex-direction: column; /* Changes layout to vertical */
+        align-items: center; /* Center aligns the cards for a neat appearance */
+    }
+
+    .project-card {
+        width: 90%; /* Adjusts width for smaller screens to give some margin */
+        height: auto; /* Adjusts height automatically based on content */
+        margin-right: 0;
+        margin-bottom: 20px; /* Adds space between stacked cards */
+    }
+
+    .navbar {
+        top: 0; /* Top navigation for mobile */
+        bottom: auto;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon in mobile view */
+        position: absolute;
+        right: 20px; /* Positioned to the top right corner */
+        top: 10px;
+    }
+
+    .nav-links {
+        position: fixed;
+        background-color: #000;
+        top: 60px; /* Start below the hamburger icon */
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%); /* Hide above the viewport initially */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar.open .nav-links {
+        transform: translateY(0); /* Slide down to show menu */
+    }
+
+    .skills-wrapper {
+        flex-direction: column;
+    }
+
+    .skills-description {
+        order: 2; /* On mobile, description goes below the list */
+    }
+
+    .skills-list {
+        order: 1; /* On mobile, list comes first */
+    }
+
+    .description-content {
+        display: none;
+    }
+
+    .description-content.active {
+        display: block;
+    }
+
+    .project-pic-grid-item {
+        flex: 0 0 100%; /* Takes full width in mobile view, thus stacking vertically */
+    }
+}
+
+/* Additional media query for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bold-text-1{
+      font-size: 15px;
+    }
+    .bold-text-2 {
+        font-size: 40px;
+    }
+
+    .home-hero-container, .featured-projects-header, .featured-projects {
+        padding-left: 30px;
+    }
+    .hero .bold-text-2{
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+    .projects-container {
+        flex-wrap: wrap; /* Allows wrapping of project cards */
+        justify-content: center; /* Center aligns the cards for a neat appearance */
+    }
+
+    .project-card {
+        width: 45%; /* Adjusts width for tablet screens to fit two cards per row */
+        margin-right: 0;
+        margin-bottom: 20px; /* Adds space between cards vertically */
+    }
+}
+
