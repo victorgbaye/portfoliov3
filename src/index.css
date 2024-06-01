@@ -516,6 +516,19 @@ footer h1 {
     .bold-text-2 {
         font-size: 30px;
     }
+    .skills-container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* place-content: center; */
+        padding: 0px 0px;
+        gap: 20px;
+        /* max-width: 80%; */
+    }
+    .featured-projects-header, .featured-projects{
+        padding: 0;
+    }
 
     /* .home-hero-container, .featured-projects-header, .featured-projects {
         padding-left: 20px;
