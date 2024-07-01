@@ -509,6 +509,7 @@ footer h1 {
     
 .home-hero-container {
     height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     padding-left: 0px; /* Aligns content to the left */
@@ -518,7 +519,8 @@ footer h1 {
         display: flex;
         /* justify-content: center; */
         place-items: center;
-        padding:0px 20px
+        padding:0px 20px;
+        width: 100%;
     }
     .bold-text-1{
         font-size: 20px;
