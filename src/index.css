@@ -255,6 +255,11 @@ footer h1 {
     display: flex;
 }
 
+.footer-links a{
+   text-decoration: none;
+   color: inherit;
+}
+
 .footer-links a {
     padding: 0px 10px;
     width: 140px;
@@ -511,10 +516,15 @@ footer h1 {
     body{
         background-color: aqua;
         display: flex;
+        /* justify-content: center; */
+        place-items: center;
         padding:0px 20px
     }
+    .bold-text-1{
+        font-size: 20px;
+    }
     .bold-text-2 {
-        font-size: 30px;
+        font-size: 50px;
     }
     .skills-container {
         height: 100vh;
@@ -525,9 +535,13 @@ footer h1 {
         padding: 0px 0px;
         gap: 20px;
         /* max-width: 80%; */
+        width: 100%;
     }
     .featured-projects-header, .featured-projects{
         padding: 0;
+    }
+    .skills-wrapper {
+        flex-direction: column;
     }
 
     /* .home-hero-container, .featured-projects-header, .featured-projects {
@@ -577,7 +591,8 @@ footer h1 {
     }
 
     .skills-wrapper {
-        flex-direction: column;
+        /* flex-direction: column; */
+
     }
 
     .skills-description {
