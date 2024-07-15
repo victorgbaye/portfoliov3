@@ -21,7 +21,7 @@ const projects = [
   ];
 const Home = () => {
   return (
-    <>
+    <div className="home">
         <header className="hero-section">
             <p className="hero-section-text-small">👋🏾   Hi, I am Victor Gbaye</p>
             <h2>Software Engineer & Developer</h2>
@@ -58,7 +58,7 @@ const Home = () => {
         ))}
         </main>
         </section>
-    </>
+    </div>
 
   )
 }
