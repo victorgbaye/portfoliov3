@@ -12,6 +12,7 @@ body{
     text-align: center;
     height: 100vh;
     flex-direction: column;
+    margin: 0;
 
 }
 .hero-section{
@@ -228,6 +229,10 @@ footer{
     align-items: flex-start;
     gap: 16px;
     background: var(--Neutral-Background, #0A0A0A);
+    border-radius: var(--Type-Size-LG, 16px);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
     /* width: 390px; */
     
 }
