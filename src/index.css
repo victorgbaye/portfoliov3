@@ -218,7 +218,34 @@ width: 100%;
        transform: rotate(15deg);
 
   }
-  
+
+footer{
+    display: flex;
+    width: 390px;
+    padding: 26px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--Neutral-Background, #0A0A0A);
+}
+footer h4{
+    color: var(--Neutral-Text-Primary, #FAFAFA);
+    font-family: sans-serif;
+    font-size: var(--Type-Size-MD, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.035px;
+}
+footer a{
+    color: var(--Neutral-Text-Primary, #d2d0d0);
+    font-size: 14px;
+    font-family: sans-serif;
+    text-decoration: underline;
+    font-weight: 200;
+
+
+}
 @media (min-width: 768px) {
 
 }

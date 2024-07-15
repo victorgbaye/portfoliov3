@@ -1,5 +1,5 @@
-// import Footer from './components/Footer';
-import MouseTrail from './components/MouseTrail';
+import Footer from './components/Footer';
+// import MouseTrail from './components/MouseTrail';
 // import Navigation from './components/Navigation';
 import About from './pages/About';
 import ProjectDetails from './pages/ProjectDetails'
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <MouseTrail/>
+    {/* <MouseTrail/> */}
       <Router>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -24,7 +24,7 @@ function App() {
         </Routes>
       </Router>
       {/* <Navigation/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 }
