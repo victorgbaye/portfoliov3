@@ -2,10 +2,12 @@ type CardProps = {
     icon: string;
     title: string;
     description: string;
+    backgroundColor: string;
+
   };
-const SkillCard: React.FC<CardProps> = ({ icon, title, description }) => {
+const SkillCard: React.FC<CardProps> = ({ icon, title, description, backgroundColor }) => {
   return (
-    <div className="card">
+    <div className="card" style={{ backgroundColor }}>
     <div className="card-icon">
       <img src={icon} alt={`${title} icon`} />
     </div>

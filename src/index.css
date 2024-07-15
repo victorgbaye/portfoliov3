@@ -12,6 +12,7 @@ body{
     text-align: center;
     height: 100vh;
     flex-direction: column;
+
 }
 .hero-section{
     border-radius: 24px;
@@ -24,6 +25,8 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 32px;
+    margin-bottom: 104px;
+    margin-top: 24px;
 }
 .hero-section .hero-section-text-small{
     font-family: 'Inter', sans-serif;
@@ -54,7 +57,25 @@ width: 100%;
     padding: 0 20px;
     width: 100%;
 }
-
+.skill-section{
+    display: flex;
+    width: 358px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.skill-section-title{
+    color: var(--Neutral-Text-Primary, #171717);
+    /* font-family: Anton; */
+    font-family:sans-serif, 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.05px;
+    align-self: stretch;
+    text-align: start;
+}
 .skill-section .services{
     display: flex;
     flex-direction: column;
@@ -63,6 +84,45 @@ width: 100%;
     gap: 24px;
     align-self: stretch;
 }
+.card{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: var(--Type-Size-LG, 16px);
+    width: 358px;
+
+    /* background: var(--Critical-Opacity---Deep, rgba(254, 242, 242, 0.70)); */
+    }
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+.card-content h3 {
+    color: var(--Neutral-Text-Primary, #171717);
+
+    font-family:sans-serif, 'Inter';
+    font-size: var(--Type-Size-LG, 16px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.272px;
+  }
+.card-content p {
+    color: var(--Neutral-Text-Secondary, #525252);
+    font-family:sans-serif, 'Inter';
+    font-size: var(--Type-Size-MD, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.035px;
+    text-align: start;
+  }
 @media (min-width: 768px) {
 
 }
