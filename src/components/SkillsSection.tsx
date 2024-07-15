@@ -10,7 +10,7 @@ const SkillsSection = () => {
         {
             id: "backend-api",
             stack: "Backend Development/API Design",
-            description: "I develop robust backend solutions and design scalable APIs using Node.js (Express.js) and Django. My work ensures efficient data handling, secure server-side operations, and seamless integration with third-party API's and frontend technologies for a cohesive user experience."
+            description: "I develop robust backend solutions and design scalable APIs using Node.js, Springboot and Django. My work ensures efficient data handling, secure server-side operations, and seamless integration with third-party API's and frontend technologies for a cohesive user experience."
         },
         {
             id: "systems-design",
