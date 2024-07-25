@@ -13,7 +13,6 @@ body{
     height: 100vh;
     flex-direction: column;
     margin: 0;
-
 }
 .hero-section{
     border-radius: 24px;
@@ -22,15 +21,13 @@ body{
     display: flex;
     flex-direction: column;
     width: 90vw;
-    max-width: 60vw; /* Adjusted for responsiveness */
+    max-width: 100%; /* Adjusted for responsiveness */
     padding: 72px 0px;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
     margin-bottom: 104px;
     margin-top: 60px;
-    
-    
 }
 .hero-section .hero-section-text-small{
     font-family: 'Inter', sans-serif;
@@ -64,9 +61,9 @@ body{
 .skill-section{
     display: flex;
     width: 90vw; /* Adjusted for responsiveness */
-    max-width: 60vw;
+    max-width: 100%; /* Adjusted for responsiveness */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
     margin-bottom: 116px;
 }
@@ -97,11 +94,10 @@ body{
     gap: 24px;
     align-self: stretch;
     border-radius: var(--Type-Size-LG, 16px);
-    width: 90vw; /* Adjusted for responsiveness */
-    max-width: 60vw;
-
+    width: 100%; /* Adjusted for responsiveness */
+    max-width: 100%; /* Adjusted for responsiveness */
     /* background: var(--Critical-Opacity---Deep, rgba(254, 242, 242, 0.70)); */
-    }
+}
 .skill-card-content{
     display: flex;
     flex-direction: column;
@@ -117,7 +113,7 @@ body{
     font-weight: 700;
     line-height: 24px; /* 150% */
     letter-spacing: 0.272px;
-  }
+}
 .skill-card-content p {
     color: var(--Neutral-Text-Secondary, #525252);
     font-family:sans-serif, 'Inter';
@@ -127,7 +123,7 @@ body{
     line-height: 22px; /* 157.143% */
     letter-spacing: 0.035px;
     text-align: start;
-  }
+}
 
 /* ProjectCard.css */
 .project-card {
@@ -136,23 +132,20 @@ body{
     text-align: left;
     display: flex;
     flex-direction: column;
-    max-width: 90vw; /* Adjusted for responsiveness */
-    max-width: 60vw;
+    width: 100%; /* Adjusted for responsiveness */
+    max-width: 100%; /* Adjusted for responsiveness */
     padding-top: 66px;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     gap: 37px;
     border-radius: 16px;
     border: 1px solid var(--Neutral-Border, #E5E5E5);
     background: var(--Neutral-Surface, #F9FAFB);
-  }
-  
-  .project-image img {
+}
+.project-image img {
     width: 100%;
-  }
-  
-  .project-content {
+}
+.project-content {
     padding: 16px;
     display: flex;
     align-items: center;
@@ -161,9 +154,8 @@ body{
     background: var(--Neutral-Background, #FFF);
     width: 100%;    
     justify-content: space-between;
-  }
-  
-  .project-content h3 {
+}
+.project-content h3 {
     color: var(--Neutral-Text-Primary, #171717);
     font-family: sans-serif;
     font-size: var(--Type-Size-LG, 16px);
@@ -172,9 +164,8 @@ body{
     line-height: 24px; /* 150% */
     letter-spacing: 0.272px;
     align-self: stretch;
-  }
-  
-  .project-content p {
+}
+.project-content p {
     margin: 0 0 20px;
     color: var(--Neutral-Text-Secondary, #525252);
     font-family: sans-serif;
@@ -183,16 +174,14 @@ body{
     font-weight: 400;
     line-height: 22px; /* 137.5% */
     letter-spacing: 0.04px;
-  }
-  
-  .project-link {
+}
+.project-link {
     display: inline-block;
     font-size: 1.5em;
     color: #0073e6;
     text-decoration: none;
-  }
-  
-  .project-link span {
+}
+.project-link span {
     display: inline-block;
     transition: transform 0.3s;
     border-radius: var(--XXXL, 100px);
@@ -206,11 +195,10 @@ body{
     align-items: center;
     gap: var(--L, 16px);
     transform: rotate(45deg);
-  }
-  
-  .project-link:hover span {
+}
+.project-link:hover span {
     transform: translateX(5px) rotate(15deg);
-  }
+}
 
 footer{
     display: flex;
@@ -245,15 +233,13 @@ footer a{
     flex-direction: column;
     gap: 32px;
     width: 90vw; /* Adjusted for responsiveness */
-    max-width: 60vw;
+    max-width: 100%; /* Adjusted for responsiveness */
     justify-content: center;
     align-items: center;
     margin-bottom: 116px;
     margin: 0 auto; /* Center the section horizontally */
     margin-bottom: 116px;
-
 }
-
 .technology-icon-container {
     display: flex;
     flex-wrap: wrap;
@@ -261,10 +247,9 @@ footer a{
     align-items: center;
     gap: 8px; /* Space between icons */
     width: 100%; /* Full width of parent container */
-    max-width: 60vw; /* Maximum width to control size */
+    max-width: 90%; /* Adjusted for responsiveness */
     margin: 0 auto; /* Center the container horizontally */
 }
-
 .technology-section-icon {
     display: flex;
     align-items: center;
@@ -278,7 +263,6 @@ footer a{
     box-sizing: border-box;
     transition: transform 0.3s;
 }
-
 .technology-section-icon:hover {
     transform: scale(1.1); /* Slight scale on hover for interaction feedback */
 }
@@ -298,35 +282,28 @@ footer a{
     letter-spacing: 0.07px;
     text-align: start;
     font-family: sans-serif;
-
-
 }
-
 .border-square {
     width: 20px; /* Adjust size as needed */
     height: 20px; /* Adjust size as needed */
     position: absolute;
-  }
-
+}
 .top-left {
     top: -10px;
     left: -10px;
-  }
-  
-  .top-right {
+}
+.top-right {
     top: -10px;
     right: -10px;
-  }
-  
-  .bottom-left {
+}
+.bottom-left {
     bottom: -10px;
     left: -10px;
-  }
-  
-  .bottom-right {
+}
+.bottom-right {
     bottom: -10px;
     right: -10px;
-  }
+}
 
 @media (min-width: 768px) {
     .hero-section{
@@ -364,8 +341,6 @@ footer a{
         height: 564px;
     }
     .about-me-text{
-
-
         color: var(--Neutral-Text-Secondary, #525252);
         font-size: var(--Type-Size-2XL, 20px);
         font-style: normal;
@@ -375,7 +350,6 @@ footer a{
         flex: 1 0 0;
         text-align: start;
     }
-
     .technology-section {
         display: flex;
         flex-direction: column;
@@ -387,9 +361,7 @@ footer a{
         margin-bottom: 116px;
         margin: 0 auto; /* Center the section horizontally */
         margin-bottom: 116px;
-    
     }
-    
     .technology-icon-container {
         display: flex;
         flex-wrap: wrap;
@@ -400,7 +372,6 @@ footer a{
         max-width: 60vw; /* Maximum width to control size */
         margin: 0 auto; /* Center the container horizontally */
     }
-    
     .technology-section-icon {
         display: flex;
         align-items: center;
@@ -414,11 +385,9 @@ footer a{
         box-sizing: border-box;
         transition: transform 0.3s;
     }
-    
     .technology-section-icon:hover {
         transform: scale(1.1); /* Slight scale on hover for interaction feedback */
     }
-
 }
 
 @media (min-width: 1024px) {
