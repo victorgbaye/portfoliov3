@@ -45,12 +45,14 @@ const projects = [
 const Home = () => {
   return (
     <div className="home">
-        <header className="hero-section">
-            <p className="hero-section-text-small">👋🏾   Hi, I am Victor Gbaye</p>
-            <h2>Software Engineer & Developer</h2>
-            <p className="hero-section-text">
-I create software solutions that deliver exceptional user experiences, focusing on customer-based SaaS products, enterprise software, and finance and payment solutions.</p>
-        </header>
+      <div className="hero">
+          <header className="hero-section">
+              <p className="hero-section-text-small">👋🏾   Hi, I am Victor Gbaye</p>
+              <h2>Software Engineer & Developer</h2>
+              <p className="hero-section-text">
+                I create software solutions that deliver exceptional user experiences, focusing on customer-based SaaS products, enterprise software, and finance and payment solutions.</p>
+          </header>
+      </div>
         <section className="skill-section">
             <h2 className="skill-section-title">WHAT I DO</h2>
             <main className="services">
@@ -78,7 +80,7 @@ I create software solutions that deliver exceptional user experiences, focusing 
           With a solid foundation in software engineering principles and extensive experience in implementing them, I excel in delivering highly scalable and reliable software solutions through the complete software development lifecycle—from requirement definition to development and testing—using industry-standard technology. I am passionate about building enterprise solutions, finance and payment systems, and SaaS products. Continuously driven by curiosity and a desire for growth, I am always learning and adopting new technologies. My programming skills include Java, JavaScript, and Python, allowing me to create comprehensive and innovative software solutions.
           <br/>
           <br/>
-As a full-stack developer, I am proficient in both front-end and back-end development, utilizing frameworks such as Node.js, Express.js, React.js, Next.js, Spring, and Spring Boot. My expertise also extends to deployment and CI/CD tools such as Kubernetes and GitLab, cloud services with AWS, and both relational and non-relational databases.
+            As a full-stack developer, I am proficient in both front-end and back-end development, utilizing frameworks such as Node.js, Express.js, React.js, Next.js, Spring, and Spring Boot. My expertise also extends to deployment and CI/CD tools such as Kubernetes and GitLab, cloud services with AWS, and both relational and non-relational databases.
           </p>
         </section>
         <section className="technology-section">
