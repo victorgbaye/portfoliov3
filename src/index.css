@@ -275,7 +275,7 @@ footer a{
 
 .about-me-text{
     color: var(--Neutral-Text-Primary, #171717);
-    font-size: var(--Type-Size-MD, 12px);
+    font-size: var(--Type-Size-MD, 14px);
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 228.571% */
