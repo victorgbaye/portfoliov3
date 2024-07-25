@@ -1,9 +1,10 @@
 import SkillCard from "../components/SkillCard"
-import reactlogo from '../assets/react.svg'
+import react from '../assets/react.svg'
 import agbalumo from '../assets/Agbalumo.svg'
 import figplug from '../assets/figplug.svg'
 import rect from '../assets/rect.svg'
-import react from '../assets/react.svg'
+import design from '../assets/design.svg'
+import develop from '../assets/develop.svg'
 import nodejs from '../assets/nodejs.svg'
 import nextjs from '../assets/nextjs.svg'
 import express from '../assets/express.svg'
@@ -53,18 +54,19 @@ I create software solutions that deliver exceptional user experiences, focusing 
         <section className="skill-section">
             <h2 className="skill-section-title">WHAT I DO</h2>
             <main className="services">
-                <SkillCard
-                icon={reactlogo}
-                title="Frontend Development"
-                description="Crafting intuitive and engaging interfaces that provide seamless user experiences across all devices."
-                backgroundColor="#f8ecec"
-                />
-                <SkillCard
-                icon={reactlogo}
-                title="Backend Development"
-                description="Crafting intuitive and engaging interfaces that provide seamless user experiences across all devices."
-                backgroundColor="rgba(240, 253, 244, 0.70)"
-                />
+            <SkillCard
+              icon={design}
+              title="Software Design"
+              description="Designing robust and scalable software architectures that meet user needs and business goals."
+              backgroundColor="#f8ecec"
+          />
+          <SkillCard
+              icon={develop}
+              title="Software Development"
+              description="Building efficient and reliable software solutions that drive innovation and improve operational efficiency."
+              backgroundColor="rgba(240, 253, 244, 0.70)"
+          />
+
             </main>
         </section>
         <section className="skill-section about-hero">

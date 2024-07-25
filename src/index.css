@@ -340,9 +340,10 @@ footer a{
         max-height: 564px;
         height: 564px;
     }
+    
     .about-me-text{
         color: var(--Neutral-Text-Secondary, #525252);
-        font-size: var(--Type-Size-2XL, 20px);
+        font-size: var(--Type-Size-2XL, 18px);
         font-style: normal;
         font-weight: 200;
         line-height: 56px; /* 233.333% */
