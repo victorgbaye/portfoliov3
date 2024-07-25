@@ -21,7 +21,8 @@ body{
     background: var(--Neutral-Surface, #F9FAFB);
     display: flex;
     flex-direction: column;
-    width: 358px;
+    width: 90vw;
+    max-width: 60vw; /* Adjusted for responsiveness */
     padding: 72px 0px;
     justify-content: space-between;
     align-items: center;
@@ -36,15 +37,15 @@ body{
 }
 .hero-section h2{
     color: var(--Neutral-Text-Primary, #171717);
-text-align: center;
-font-family: 'Anton', sans-serif;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.08px;
-text-transform: uppercase;
-width: 100%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.08px;
+    text-transform: uppercase;
+    width: 100%;
 }
 
 .hero-section-text{
@@ -62,7 +63,8 @@ width: 100%;
 }
 .skill-section{
     display: flex;
-    width: 358px;
+    width: 90vw; /* Adjusted for responsiveness */
+    max-width: 60vw;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
@@ -70,7 +72,6 @@ width: 100%;
 }
 .skill-section-title{
     color: var(--Neutral-Text-Primary, #171717);
-    /* font-family: Anton; */
     font-family:sans-serif, 'Inter';
     font-size: 20px;
     font-style: normal;
@@ -78,7 +79,7 @@ width: 100%;
     line-height: normal;
     letter-spacing: 0.05px;
     align-self: stretch;
-    text-align: start;
+    text-align: center;
 }
 .skill-section .services{
     display: flex;
@@ -96,7 +97,8 @@ width: 100%;
     gap: 24px;
     align-self: stretch;
     border-radius: var(--Type-Size-LG, 16px);
-    width: 358px;
+    width: 90vw; /* Adjusted for responsiveness */
+    max-width: 60vw;
 
     /* background: var(--Critical-Opacity---Deep, rgba(254, 242, 242, 0.70)); */
     }
@@ -109,7 +111,6 @@ width: 100%;
 }
 .skill-card-content h3 {
     color: var(--Neutral-Text-Primary, #171717);
-
     font-family:sans-serif, 'Inter';
     font-size: var(--Type-Size-LG, 16px);
     font-style: normal;
@@ -128,21 +129,15 @@ width: 100%;
     text-align: start;
   }
 
-
-
 /* ProjectCard.css */
 .project-card {
     background-color: #ffffff;
     border-radius: 10px;
-    /* padding: 20px; */
     text-align: left;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* margin: 10px; */
     display: flex;
     flex-direction: column;
-
-    display: flex;
-    max-width: 358px;
+    max-width: 90vw; /* Adjusted for responsiveness */
+    max-width: 60vw;
     padding-top: 66px;
     flex-direction: column;
     justify-content: flex-end;
@@ -169,8 +164,6 @@ width: 100%;
   }
   
   .project-content h3 {
-    /* margin: 0 0 10px;
-    font-size: 1.5em; */
     color: var(--Neutral-Text-Primary, #171717);
     font-family: sans-serif;
     font-size: var(--Type-Size-LG, 16px);
@@ -183,7 +176,6 @@ width: 100%;
   
   .project-content p {
     margin: 0 0 20px;
-
     color: var(--Neutral-Text-Secondary, #525252);
     font-family: sans-serif;
     font-size: var(--Type-Size-LG, 16px);
@@ -191,7 +183,6 @@ width: 100%;
     font-weight: 400;
     line-height: 22px; /* 137.5% */
     letter-spacing: 0.04px;
-
   }
   
   .project-link {
@@ -215,13 +206,10 @@ width: 100%;
     align-items: center;
     gap: var(--L, 16px);
     transform: rotate(45deg);
-
   }
   
   .project-link:hover span {
-    transform: translateX(5px);
-       transform: rotate(15deg);
-
+    transform: translateX(5px) rotate(15deg);
   }
 
 footer{
@@ -235,9 +223,6 @@ footer{
     border-radius: var(--Type-Size-LG, 16px);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-
-    /* width: 390px; */
-    
 }
 footer h4{
     color: var(--Neutral-Text-Primary, #FAFAFA);
@@ -254,13 +239,99 @@ footer a{
     font-family: sans-serif;
     text-decoration: underline;
     font-weight: 200;
+}
+.technology-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 90vw; /* Adjusted for responsiveness */
+    max-width: 60vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 116px;
+    margin: 0 auto; /* Center the section horizontally */
+    margin-bottom: 116px;
+
+}
+
+.technology-icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Space between icons */
+    width: 100%; /* Full width of parent container */
+    max-width: 60vw; /* Maximum width to control size */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.technology-section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border: 1px solid var(--Neutral-Border, #E5E5E5);
+    background: #FFF;
+    width: 70px;
+    height: 60px;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.technology-section-icon:hover {
+    transform: scale(1.1); /* Slight scale on hover for interaction feedback */
+}
+
+.about-hero{
+    position: relative;
+    border: 1px solid var(--Neutral-Border, #E5E5E5);
+    padding: 24px;
+}
+
+.about-me-text{
+    color: var(--Neutral-Text-Primary, #171717);
+    font-size: var(--Type-Size-MD, 12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 228.571% */
+    letter-spacing: 0.07px;
+    text-align: start;
+    font-family: sans-serif;
 
 
 }
+
+.border-square {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    position: absolute;
+  }
+
+.top-left {
+    top: -10px;
+    left: -10px;
+  }
+  
+  .top-right {
+    top: -10px;
+    right: -10px;
+  }
+  
+  .bottom-left {
+    bottom: -10px;
+    left: -10px;
+  }
+  
+  .bottom-right {
+    bottom: -10px;
+    right: -10px;
+  }
+
 @media (min-width: 768px) {
     .hero-section{
         max-width: 1152px;
-        width: auto;
+        width: 80vw; /* Adjusted for responsiveness */
         height: 421px;
     }
     .hero-section-text{
@@ -276,7 +347,7 @@ footer a{
 
     .skill-section{
         max-width: 1152px;
-        width: 1152px;
+        width: 80vw; /* Adjusted for responsiveness */
     }
     .skill-section .services{
         display: flex;
@@ -292,5 +363,76 @@ footer a{
         max-height: 564px;
         height: 564px;
     }
+    .about-me-text{
 
+
+        color: var(--Neutral-Text-Secondary, #525252);
+        font-size: var(--Type-Size-2XL, 20px);
+        font-style: normal;
+        font-weight: 200;
+        line-height: 56px; /* 233.333% */
+        letter-spacing: 0.12px;
+        flex: 1 0 0;
+        text-align: start;
+    }
+
+    .technology-section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 90vw; /* Adjusted for responsiveness */
+        max-width: 60vw;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 116px;
+        margin: 0 auto; /* Center the section horizontally */
+        margin-bottom: 116px;
+    
+    }
+    
+    .technology-icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px; /* Space between icons */
+        width: 100%; /* Full width of parent container */
+        max-width: 60vw; /* Maximum width to control size */
+        margin: 0 auto; /* Center the container horizontally */
+    }
+    
+    .technology-section-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        border: 1px solid var(--Neutral-Border, #E5E5E5);
+        background: #FFF;
+        width: 100px;
+        height: 80px;
+        padding: 16px;
+        box-sizing: border-box;
+        transition: transform 0.3s;
+    }
+    
+    .technology-section-icon:hover {
+        transform: scale(1.1); /* Slight scale on hover for interaction feedback */
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        max-width: 1152px;
+        width: 70vw;
+    }
+    .skill-section {
+        width: 70vw;
+    }
+    .skill-card {
+        width: 70vw;
+    }
+    .project-card {
+        width: 70vw;
+    }
 }
