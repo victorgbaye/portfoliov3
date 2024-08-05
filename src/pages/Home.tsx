@@ -40,6 +40,24 @@ const projects = [
         description: 'A platform that helps speed designers workflow',
         link: '/project-details/agbalumo-tunes'
       },
+      {
+        image: figplug,
+        title: 'Fig Plug',
+        description: 'A platform that helps speed designers workflow',
+        link: '/project-details/agbalumo-tunes'
+      },
+      {
+        image: figplug,
+        title: 'Fig Plug',
+        description: 'A platform that helps speed designers workflow',
+        link: '/project-details/agbalumo-tunes'
+      },
+      {
+        image: figplug,
+        title: 'Fig Plug',
+        description: 'A platform that helps speed designers workflow',
+        link: '/project-details/agbalumo-tunes'
+      },
     // Add more projects as needed
   ];
 const Home = () => {

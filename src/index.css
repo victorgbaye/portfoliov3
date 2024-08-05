@@ -15,7 +15,7 @@ body{
     margin: 0;
 }
 .hero{
-    height: 100vh;
+   height: 100vh;
     display: flex;
     justify-content: center;  /* Horizontally centers the content */
     align-items: center;      /* Vertically centers the content */
@@ -333,9 +333,14 @@ footer a{
         width: 80vw; /* Adjusted for responsiveness */
     }
     .skill-section .services{
+        /* display: flex;
+        flex-direction: row;
+        width: 100%; */
         display: flex;
         flex-direction: row;
-        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px; /* Space between project cards */
     }
     .skill-card{
         flex: 1;
@@ -345,6 +350,9 @@ footer a{
         max-width: 564px;
         max-height: 564px;
         height: 564px;
+        flex: 1 1 calc(50% - 24px); /* Adjust the width to take up 50% of the row, accounting for the gap */
+        max-width: calc(50% - 24px); /* Ensure the maximum width is 50% minus the gap */
+        box-sizing: border-box;
     }
     
     .about-me-text{
