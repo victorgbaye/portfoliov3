@@ -1,7 +1,9 @@
 import SkillCard from "../components/SkillCard"
 import react from '../assets/react.svg'
 import agbalumo from '../assets/Agbalumo.svg'
+import booknow from '../assets/booknow.svg'
 import figplug from '../assets/figplug.svg'
+import proform from '../assets/proform.svg'
 import rect from '../assets/rect.svg'
 import design from '../assets/design.svg'
 import develop from '../assets/develop.svg'
@@ -41,25 +43,13 @@ const projects = [
         link: '/project-details/agbalumo-tunes'
       },
       {
-        image: figplug,
-        title: 'Fig Plug',
+        image: booknow,
+        title: 'book now',
         description: 'A platform that helps speed designers workflow',
         link: '/project-details/agbalumo-tunes'
       },
       {
-        image: figplug,
-        title: 'Fig Plug',
-        description: 'A platform that helps speed designers workflow',
-        link: '/project-details/agbalumo-tunes'
-      },
-      {
-        image: figplug,
-        title: 'Fig Plug',
-        description: 'A platform that helps speed designers workflow',
-        link: '/project-details/agbalumo-tunes'
-      },
-      {
-        image: figplug,
+        image: proform,
         title: 'Fig Plug',
         description: 'A platform that helps speed designers workflow',
         link: '/project-details/agbalumo-tunes'
