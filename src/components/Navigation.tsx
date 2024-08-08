@@ -1,5 +1,6 @@
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import hamburger from '../assets/hamburger.svg'
+import cancel from '../assets/cancel.svg'
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -7,16 +8,35 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-      <ul className="nav-links">
-        <li><a href="#skills">Home</a></li>
-        <li><a href="#experience">About</a></li>
-        <li><a href="#resume">Skills</a></li>
-        <li><a href="#resume">Works</a></li>
-        <li><a href="#contact">Github</a></li>
+    <nav className="navbar">
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <li><a href="#socials">About</a></li>
+        <li><a href="#experience">Technology</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <p>{isOpen ? '-' : '|'} </p>
+        <li><a href="#mail">Github</a></li>
+        <li><a href="#call">Linkedin</a></li>
+        <li><a href="#cv">Youtube</a></li>
+        <li><a href="#cv">Blog</a></li>
+
       </ul>
-      <button className="hamburger" onClick={toggleMenu}>&#9776;</button>
+      {/* <button >&#9776;</button> */}
+
+      <img src={isOpen? cancel : hamburger} className="hamburger" onClick={toggleMenu}/>
     </nav>
   );
 };
