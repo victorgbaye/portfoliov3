@@ -24,14 +24,14 @@ const Navigation = () => {
   return (
     <nav className="navbar">
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li><a href="#socials">About</a></li>
-        <li><a href="#experience">Technology</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#technology-section">Technology</a></li>
         <li><a href="#projects">Projects</a></li>
         <p>{isOpen ? '-' : '|'} </p>
-        <li><a href="#mail">Github</a></li>
-        <li><a href="#call">Linkedin</a></li>
-        <li><a href="#cv">Youtube</a></li>
-        <li><a href="#cv">Blog</a></li>
+        <li><a href="https://github.com/victorgbaye" target="_blank">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/victor-gbaye/" target="_blank">Linkedin</a></li>
+        <li><a href="https://www.youtube.com/@victorgbayedev" target="_blank">Youtube</a></li>
+        <li><a href="https://medium.com/@victorgbayedev" target="_blank">Blog</a></li>
 
       </ul>
       {/* <button >&#9776;</button> */}

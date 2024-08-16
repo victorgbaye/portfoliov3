@@ -34,32 +34,32 @@ const projects = [
       image: agbalumo,
       title: 'Agbalumo tunes',
       description: 'A music application where users can explore various genres of music.',
-      link: '/project-details/agbalumo-tunes'
+      link: 'https://www.agbalumotunes.com/'
     },
     {
         image: figplug,
         title: 'Fig Plug',
         description: 'A platform that helps speed designers workflow',
-        link: '/project-details/agbalumo-tunes'
+        link: 'https://thefigplug.onrender.com/'
       },
       {
         image: booknow,
         title: 'book now',
         description: 'A platform that helps speed designers workflow',
-        link: '/project-details/agbalumo-tunes'
+        link: 'https://bookme-larz.onrender.com/'
       },
       {
         image: proform,
-        title: 'Fig Plug',
+        title: 'Pro form',
         description: 'A platform that helps speed designers workflow',
-        link: '/project-details/agbalumo-tunes'
+        link: 'https://proform.onrender.com/'
       },
     // Add more projects as needed
   ];
 const Home = () => {
   return (
     <div className="home">
-      <div className="hero">
+      <div className="hero" id="about">
           <header className="hero-section">
               <p className="hero-section-text-small">👋🏾   Hi, I am Victor Gbaye</p>
               <h2>Software Engineer & Developer</h2>
@@ -97,7 +97,7 @@ const Home = () => {
             As a full-stack developer, I am proficient in both front-end and back-end development, utilizing frameworks such as Node.js, Express.js, React.js, Next.js, Spring, and Spring Boot. My expertise also extends to deployment and CI/CD tools such as Kubernetes and GitLab, cloud services with AWS, and both relational and non-relational databases.
           </p>
         </section>
-        <section className="technology-section">
+        <section className="technology-section" id="technology-section">
           <h2 className="skill-section-title">Technologies i work with</h2>
 
 
@@ -123,7 +123,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="skill-section">
+        <section className="skill-section" id="projects">
         <h2 className="skill-section-title">FEATURED PROJECTS</h2>
         <main className="services">
             {projects.map(project => (

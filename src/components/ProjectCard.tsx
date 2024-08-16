@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, li
             <h3>{title}</h3>
             <p>{description}</p>
         </div>
-        <a href={link} className="project-link">
+        <a href={link} className="project-link"  target="_blank">
           <span><img src={arrow}/></span>
         </a>
       </div>

@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     display: flex;
     /* justify-content: center; */
@@ -137,6 +140,7 @@ body{
     align-items: center;
     gap: 32px;
     margin-bottom: 116px;
+    padding-top: 30px;
 }
 .skill-section-title{
     color: var(--Neutral-Text-Primary, #171717);
@@ -310,6 +314,7 @@ footer a{
     margin-bottom: 116px;
     margin: 0 auto; /* Center the section horizontally */
     margin-bottom: 116px;
+    padding-top: 30px;
 }
 .technology-icon-container {
     display: flex;
